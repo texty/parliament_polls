@@ -149,14 +149,14 @@ function poll_chart_vertical() {
                 .call(yAxis_ticks);
 
             var year_lines = g.append("g").attr("class", "year-lines-pane");
-
-            year_lines
-                .append("line")
-                .attr("class", "year-line")
-                .attr("x1", 0)
-                .attr("x2", width)
-                .attr("y1", y(new Date(2018, 0, 1)))
-                .attr("y2", y(new Date(2018, 0, 1)));
+            //
+            // year_lines
+            //     .append("line")
+            //     .attr("class", "year-line")
+            //     .attr("x1", 0)
+            //     .attr("x2", width)
+            //     .attr("y1", y(new Date(2018, 0, 1)))
+            //     .attr("y2", y(new Date(2018, 0, 1)));
 
 
             year_lines
