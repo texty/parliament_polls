@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px; }
@@ -149,43 +150,56 @@ header {
         stroke-opacity: 1;
         stroke-linejoin: round; }
 
-.Tymoshenko.stroke-color {
+.Опозиційна__платформа.stroke-color {
+  stroke: #ff02e7 !important; }
+.Опозиційна__платформа.fill-color {
+  fill: #ff02e7 !important; }
+.Опозиційна__платформа.stroke-pseudo-transparent-color {
+  stroke: #ffccfa !important; }
+.Опозиційна__платформа .stroke-color {
+  stroke: #ff02e7 !important; }
+.Опозиційна__платформа .fill-color {
+  fill: #ff02e7 !important; }
+.Опозиційна__платформа .stroke-pseudo-transparent-color {
+  stroke: #ffccfa !important; }
+
+.Батьківщина.stroke-color {
   stroke: #e41a1c !important; }
-.Tymoshenko.fill-color {
+.Батьківщина.fill-color {
   fill: #e41a1c !important; }
-.Tymoshenko.stroke-pseudo-transparent-color {
+.Батьківщина.stroke-pseudo-transparent-color {
   stroke: #fad1d2 !important; }
-.Tymoshenko .stroke-color {
+.Батьківщина .stroke-color {
   stroke: #e41a1c !important; }
-.Tymoshenko .fill-color {
+.Батьківщина .fill-color {
   fill: #e41a1c !important; }
-.Tymoshenko .stroke-pseudo-transparent-color {
+.Батьківщина .stroke-pseudo-transparent-color {
   stroke: #fad1d2 !important; }
 
-.Poroshenko.stroke-color {
+.Європейська__солідарність.stroke-color {
   stroke: #377eb8 !important; }
-.Poroshenko.fill-color {
+.Європейська__солідарність.fill-color {
   fill: #377eb8 !important; }
-.Poroshenko.stroke-pseudo-transparent-color {
+.Європейська__солідарність.stroke-pseudo-transparent-color {
   stroke: #d7e5f1 !important; }
-.Poroshenko .stroke-color {
+.Європейська__солідарність .stroke-color {
   stroke: #377eb8 !important; }
-.Poroshenko .fill-color {
+.Європейська__солідарність .fill-color {
   fill: #377eb8 !important; }
-.Poroshenko .stroke-pseudo-transparent-color {
+.Європейська__солідарність .stroke-pseudo-transparent-color {
   stroke: #d7e5f1 !important; }
 
-.Zelensky.stroke-color {
+.Слуга__народу.stroke-color {
   stroke: #4daf4a !important; }
-.Zelensky.fill-color {
+.Слуга__народу.fill-color {
   fill: #4daf4a !important; }
-.Zelensky.stroke-pseudo-transparent-color {
+.Слуга__народу.stroke-pseudo-transparent-color {
   stroke: #dbefdb !important; }
-.Zelensky .stroke-color {
+.Слуга__народу .stroke-color {
   stroke: #4daf4a !important; }
-.Zelensky .fill-color {
+.Слуга__народу .fill-color {
   fill: #4daf4a !important; }
-.Zelensky .stroke-pseudo-transparent-color {
+.Слуга__народу .stroke-pseudo-transparent-color {
   stroke: #dbefdb !important; }
 
 .Grytsenko.stroke-color {
@@ -213,19 +227,6 @@ header {
   fill: #ff7f00 !important; }
 .Boyko .stroke-pseudo-transparent-color {
   stroke: #ffe5cc !important; }
-
-.Lyashko.stroke-color {
-  stroke: #ff02e7 !important; }
-.Lyashko.fill-color {
-  fill: #ff02e7 !important; }
-.Lyashko.stroke-pseudo-transparent-color {
-  stroke: #ffccfa !important; }
-.Lyashko .stroke-color {
-  stroke: #ff02e7 !important; }
-.Lyashko .fill-color {
-  fill: #ff02e7 !important; }
-.Lyashko .stroke-pseudo-transparent-color {
-  stroke: #ffccfa !important; }
 
 .Undecided.stroke-color {
   stroke: #c1c1c1 !important; }

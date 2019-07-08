@@ -15,12 +15,13 @@ $color_1: blue;
   }
 }
 
-@include candidate_name_color("Tymoshenko", #e41a1c);
-@include candidate_name_color("Poroshenko", #377eb8);
-@include candidate_name_color("Zelensky", #4daf4a);
+@include candidate_name_color("Опозиційна__платформа", #ff02e7);
+@include candidate_name_color("Батьківщина", #e41a1c);
+@include candidate_name_color("Європейська__солідарність", #377eb8);
+@include candidate_name_color("Слуга__народу", #4daf4a);
+
 @include candidate_name_color("Grytsenko", #984ea3);
 @include candidate_name_color("Boyko", #ff7f00);
-@include candidate_name_color("Lyashko", #ff02e7);
 //@include candidate_name_color("Sadovy", #ffd900);
 @include candidate_name_color("Undecided", #c1c1c1);
 @include candidate_name_color("Will_not_vote", #c1c1c1);
