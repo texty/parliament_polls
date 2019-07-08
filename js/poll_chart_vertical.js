@@ -63,8 +63,11 @@ function poll_chart_vertical() {
                 .append("svg")
                 .attr("class", "svg-pane");
 
-            var margin = {top: 200, right: 5, bottom: 15, left: 10}
-                , width = w - margin.left - margin.right
+            var margin = {top: 200, right: 5, bottom: 15, left: 10};
+
+            margin.top = areaLines.length * (16 + 3) + 70;
+
+             var width = w - margin.left - margin.right
                 , height = h - margin.top - margin.bottom
                 , g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")")
                 // , top_g = svg.append("g").attr("transform", "translate(" + margin.left + "," + 0 + ")");

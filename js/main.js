@@ -1,7 +1,9 @@
 (function() {
 
     var candidates_1_checked = ["Слуга__народу", "Опозиційна__платформа", "Європейська__солідарність"];
-    var candidates_1_unchecked = ["Батьківщина"];
+    var candidates_1_unchecked = ["Батьківщина", "Сила__і__Честь", "Громадянська__позиція", "Опозиційний__блок",
+        "Радикальна__партія","Українська__стратегія","Свобода","Самопоміч",
+        "Голос____Вакарчук____","Не__визначились","Не__піду__на__вибори"];
 
     var candidates_2_checked = ["Tymoshenko", "Poroshenko", "Zelensky", "Undecided"];
     var candidates_2_unchecked = ["Grytsenko", "Boyko", "Lyashko"];
