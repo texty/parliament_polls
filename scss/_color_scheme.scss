@@ -20,11 +20,13 @@ $color_1: blue;
 @include candidate_name_color("Європейська__солідарність", #377eb8);
 @include candidate_name_color("Слуга__народу", #4daf4a);
 
+@include candidate_name_color("Не__піду__на__вибори", #c1c1c1);
+@include candidate_name_color("Не__визначились", #c1c1c1);
+
 @include candidate_name_color("Grytsenko", #984ea3);
-@include candidate_name_color("Boyko", #ff7f00);
-//@include candidate_name_color("Sadovy", #ffd900);
-@include candidate_name_color("Undecided", #c1c1c1);
-@include candidate_name_color("Will_not_vote", #c1c1c1);
+@include candidate_name_color("Голос____Вакарчук____", #ff7f00);
+
+@include candidate_name_color("Сила__і__Честь", #ffd900);
 
 //"#e41a1c",
 //"#377eb8",

@@ -1,15 +1,16 @@
 (function() {
 
-    var candidates_1_checked = ["Слуга__народу", "Опозиційна__платформа", "Європейська__солідарність"];
-    var candidates_1_unchecked = ["Батьківщина", "Сила__і__Честь", "Громадянська__позиція", "Опозиційний__блок",
-        "Радикальна__партія","Українська__стратегія","Свобода","Самопоміч",
-        "Голос____Вакарчук____","Не__визначились","Не__піду__на__вибори"];
+    var candidates_1_checked = ["Слуга__народу", "Опозиційна__платформа", "Європейська__солідарність", "Не__визначились"];
+    var candidates_1_unchecked = ["Батьківщина", "Сила__і__Честь", "Голос____Вакарчук____", "Не__піду__на__вибори"];
 
-    var candidates_2_checked = ["Tymoshenko", "Poroshenko", "Zelensky", "Undecided"];
-    var candidates_2_unchecked = ["Grytsenko", "Boyko", "Lyashko"];
 
-    var candidates_3_checked = ["Tymoshenko", "Poroshenko", "Zelensky"];
-    var candidates_3_unchecked = ["Grytsenko", "Boyko", "Lyashko"];
+    //
+    // var candidates_2_checked = ["Tymoshenko", "Poroshenko", "Zelensky", "Undecided"];
+    // var candidates_2_unchecked = ["Grytsenko", "Boyko", "Lyashko"];
+    //
+    // var candidates_3_checked = ["Tymoshenko", "Poroshenko", "Zelensky"];
+    // var candidates_3_unchecked = ["Grytsenko", "Boyko", "Lyashko"];
+
 
     var all_candidates = [ "Слуга__народу", "Опозиційна__платформа", "Європейська__солідарність",
         "Батьківщина", "Сила__і__Честь", "Громадянська__позиція", "Опозиційний__блок",
@@ -42,11 +43,13 @@
     //     });
     // });
 
-    fetchData("1", function(err, raw_data_lines, raw_data_points) {
-        charts["1"] = makeChart(raw_data_lines, raw_data_points, candidates_1_checked,
-            candidates_1_unchecked, [0, 45], [0, 10, 20, 30, 40]);
+    fetchData("2", function(err, raw_data_lines, raw_data_points) {
+        charts["2"] = makeChart(raw_data_lines, raw_data_points, candidates_1_checked,
+            candidates_1_unchecked, [0, 38], [0, 10, 20, 30]);
 
-        drawChart(charts["1"]);
+        //todo додати для усіх виборців
+
+        drawChart(charts["2"]);
     });
 
     function drawChart(chart) {

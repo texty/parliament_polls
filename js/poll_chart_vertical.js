@@ -65,7 +65,7 @@ function poll_chart_vertical() {
 
             var margin = {top: 200, right: 5, bottom: 15, left: 10};
 
-            margin.top = areaLines.length * (16 + 3) + 70;
+            margin.top = areaLines.length * (16 + 3) + 120;
 
              var width = w - margin.left - margin.right
                 , height = h - margin.top - margin.bottom

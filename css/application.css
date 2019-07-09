@@ -202,6 +202,32 @@ header {
 .Слуга__народу .stroke-pseudo-transparent-color {
   stroke: #dbefdb !important; }
 
+.Не__піду__на__вибори.stroke-color {
+  stroke: #c1c1c1 !important; }
+.Не__піду__на__вибори.fill-color {
+  fill: #c1c1c1 !important; }
+.Не__піду__на__вибори.stroke-pseudo-transparent-color {
+  stroke: #f3f3f3 !important; }
+.Не__піду__на__вибори .stroke-color {
+  stroke: #c1c1c1 !important; }
+.Не__піду__на__вибори .fill-color {
+  fill: #c1c1c1 !important; }
+.Не__піду__на__вибори .stroke-pseudo-transparent-color {
+  stroke: #f3f3f3 !important; }
+
+.Не__визначились.stroke-color {
+  stroke: #c1c1c1 !important; }
+.Не__визначились.fill-color {
+  fill: #c1c1c1 !important; }
+.Не__визначились.stroke-pseudo-transparent-color {
+  stroke: #f3f3f3 !important; }
+.Не__визначились .stroke-color {
+  stroke: #c1c1c1 !important; }
+.Не__визначились .fill-color {
+  fill: #c1c1c1 !important; }
+.Не__визначились .stroke-pseudo-transparent-color {
+  stroke: #f3f3f3 !important; }
+
 .Grytsenko.stroke-color {
   stroke: #984ea3 !important; }
 .Grytsenko.fill-color {
@@ -215,44 +241,31 @@ header {
 .Grytsenko .stroke-pseudo-transparent-color {
   stroke: #eadced !important; }
 
-.Boyko.stroke-color {
+.Голос____Вакарчук____.stroke-color {
   stroke: #ff7f00 !important; }
-.Boyko.fill-color {
+.Голос____Вакарчук____.fill-color {
   fill: #ff7f00 !important; }
-.Boyko.stroke-pseudo-transparent-color {
+.Голос____Вакарчук____.stroke-pseudo-transparent-color {
   stroke: #ffe5cc !important; }
-.Boyko .stroke-color {
+.Голос____Вакарчук____ .stroke-color {
   stroke: #ff7f00 !important; }
-.Boyko .fill-color {
+.Голос____Вакарчук____ .fill-color {
   fill: #ff7f00 !important; }
-.Boyko .stroke-pseudo-transparent-color {
+.Голос____Вакарчук____ .stroke-pseudo-transparent-color {
   stroke: #ffe5cc !important; }
 
-.Undecided.stroke-color {
-  stroke: #c1c1c1 !important; }
-.Undecided.fill-color {
-  fill: #c1c1c1 !important; }
-.Undecided.stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
-.Undecided .stroke-color {
-  stroke: #c1c1c1 !important; }
-.Undecided .fill-color {
-  fill: #c1c1c1 !important; }
-.Undecided .stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
-
-.Will_not_vote.stroke-color {
-  stroke: #c1c1c1 !important; }
-.Will_not_vote.fill-color {
-  fill: #c1c1c1 !important; }
-.Will_not_vote.stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
-.Will_not_vote .stroke-color {
-  stroke: #c1c1c1 !important; }
-.Will_not_vote .fill-color {
-  fill: #c1c1c1 !important; }
-.Will_not_vote .stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
+.Сила__і__Честь.stroke-color {
+  stroke: #ffd900 !important; }
+.Сила__і__Честь.fill-color {
+  fill: #ffd900 !important; }
+.Сила__і__Честь.stroke-pseudo-transparent-color {
+  stroke: #fff7cc !important; }
+.Сила__і__Честь .stroke-color {
+  stroke: #ffd900 !important; }
+.Сила__і__Честь .fill-color {
+  fill: #ffd900 !important; }
+.Сила__і__Честь .stroke-pseudo-transparent-color {
+  stroke: #fff7cc !important; }
 
 body {
   padding-top: 3em;
