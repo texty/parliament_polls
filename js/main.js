@@ -43,6 +43,7 @@
 
     function drawChart(chart) {
         d3.select("#main_chart_vertical").selectAll("svg").remove();
+        d3.select("#main_chart_vertical").selectAll("canvas").remove();
         d3.select("#main_chart_vertical").call(chart);
         //
         // d3.selectAll("svg .axis--y--labels .tick text").filter(function(){
