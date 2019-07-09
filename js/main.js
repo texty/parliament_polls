@@ -1,17 +1,16 @@
 (function() {
 
-    var candidates_1_checked = ["Слуга__народу", "Опозиційна__платформа", "Європейська__солідарність", "Батьківщина", "Не__визначились"];
+    var candidates_1_checked = ["Слуга__народу", "Опозиційна__платформа",
+        "Європейська__солідарність", "Батьківщина", "Не__визначились"];
+
     var candidates_1_unchecked = ["Сила__і__Честь", "Голос____Вакарчук____", "Не__піду__на__вибори"];
 
-    var candidates_3_checked = ["Слуга__народу", "Опозиційна__платформа", "Європейська__солідарність"];
-    var candidates_3_unchecked = ["Батьківщина", "Сила__і__Честь", "Голос____Вакарчук____"];
 
-    //
-    // var candidates_2_checked = ["Tymoshenko", "Poroshenko", "Zelensky", "Undecided"];
-    // var candidates_2_unchecked = ["Grytsenko", "Boyko", "Lyashko"];
-    //
-    // var candidates_3_checked = ["Tymoshenko", "Poroshenko", "Zelensky"];
-    // var candidates_3_unchecked = ["Grytsenko", "Boyko", "Lyashko"];
+
+    var candidates_3_checked = ["Слуга__народу", "Опозиційна__платформа",
+            "Європейська__солідарність", "Батьківщина"];
+
+    var candidates_3_unchecked = ["Сила__і__Честь", "Голос____Вакарчук____"];
 
 
     var all_candidates = [ "Слуга__народу", "Опозиційна__платформа", "Європейська__солідарність",
@@ -23,36 +22,24 @@
     var data_root = __page_locale__.data_root;
 
     var charts = {};
-    
-    // fetchData("2", function(err, raw_data_lines, raw_data_points){
-    //     charts["2"] = makeChart(raw_data_lines, raw_data_points, candidates_2_checked,
-    //         candidates_2_unchecked,[0,27], [0,3,6,9,12,15,18,21,24,27]);
-    //
-    //     var chart_select = d3.select("#chart-select").on("change", function(){
-    //         drawChart(charts[chart_select.node().value])
-    //     });
-    //
-    //     drawChart(charts[chart_select.node().value]);
-    //
-    //     fetchData("1", function(err, raw_data_lines, raw_data_points) {
-    //         charts["1"] = makeChart(raw_data_lines, raw_data_points, candidates_1_checked,
-    //             candidates_1_unchecked, [0, 27], [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]);
-    //     });
-    //
-    //     fetchData("3", function(err, raw_data_lines, raw_data_points) {
-    //         charts["3"] = makeChart(raw_data_lines, raw_data_points, candidates_3_checked,
-    //             candidates_3_unchecked, [0, 30], [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30]);
-    //     });
-    // });
 
-    fetchData("1", function(err, raw_data_lines, raw_data_points) {
-        charts["1"] = makeChart(raw_data_lines, raw_data_points, candidates_1_checked,
-            candidates_1_unchecked, [0, 38], [0, 10, 20, 30]);
 
-        //todo додати для усіх виборців
+    fetchData("3", function(err, raw_data_lines, raw_data_points) {
+        charts["3"] = makeChart(raw_data_lines, raw_data_points, candidates_3_checked,
+            candidates_3_unchecked, [0, 50], [0, 10, 20, 30, 40, 50]);
 
-        drawChart(charts["1"]);
+        var chart_select = d3.select("#chart-select").on("change", function(){
+            drawChart(charts[chart_select.node().value])
+        });
+
+        drawChart(charts["3"]);
+
+        fetchData("1", function(err, raw_data_lines, raw_data_points) {
+            charts["1"] = makeChart(raw_data_lines, raw_data_points, candidates_1_checked,
+                candidates_1_unchecked, [0, 38], [0, 10, 20, 30]);
+        });
     });
+
 
     function drawChart(chart) {
         d3.select("#main_chart_vertical").selectAll("svg").remove();
