@@ -65,7 +65,7 @@ function poll_chart_vertical() {
 
             var margin = {top: 200, right: 5, bottom: 15, left: 10};
 
-            margin.top = areaLines.length * (16 + 3) + 120;
+            margin.top = Math.max(margin.top, areaLines.length * (16 + 16 + 3) + 120);
 
              var width = w - margin.left - margin.right
                 , height = h - margin.top - margin.bottom
@@ -239,7 +239,7 @@ function poll_chart_vertical() {
                 .attr("dy", "-0.5em")
                 .text(line => percentFormat(lastElement(line.data).v));
 
-            fix_overlaps(top_labels, 15);
+            fix_overlaps_labels(top_labels, 15);
 
             drawBackgroundForLabels();
 
@@ -276,8 +276,7 @@ function poll_chart_vertical() {
                 var top = container.node().getBoundingClientRect().y;
 
                 if (top > -margin.top + 100 + 15 || top < -height - margin.top + 100) return;
-                moveTopLine([0, -top -100])
-
+                moveTopLine([0, -top - margin.top + 100])
             });
 
 
@@ -308,9 +307,7 @@ function poll_chart_vertical() {
                     .attr("x", line => x(findClosestDataForDate(line.data, date).v))
                     .text(line => percentFormat((findClosestDataForDate(line.data, date).v)));
 
-                fix_overlaps(top_labels, 15);
-
-                drawBackgroundForLabels();
+                fix_overlaps_labels(top_labels, 15);
 
                 top_date_label
                     .text(day_format(y.invert(mouse_y)));
@@ -475,7 +472,7 @@ function poll_chart_vertical() {
 
             function drawDistributionLines(data, pane) {
                 var rect_height = 16;
-                var vertical_padding = 3;
+                var vertical_padding = 16 + 3 + 5;
 
                 var dist_g = pane
                     .append("g")
@@ -555,7 +552,7 @@ function poll_chart_vertical() {
                                 })
                         }
 
-                        fix_overlaps(top_labels, 15);
+                        fix_overlaps_labels(top_labels, 15);
                     });
 
                 dist_rect.each(function(d){d.__y__ = +d3.select(this).attr("y")});
@@ -573,15 +570,15 @@ function poll_chart_vertical() {
                     .attr("class", "candidate-name background stroke-pseudo-transparent-color")
                     .attr("x", d => x(d.data.v0))
                     .attr("y", d => d.__y__)
-                    .attr("dy", "0.9em")
+                    .attr("dy", "-0.2em")
                     .text(d => (d.__checked__ ? "✓" : "")  + d.candidate);
-                
+
                 dist_g
                     .append("text")
                     .attr("class", "candidate-name")
                     .attr("x", d => x(d.data.v0))
                     .attr("y", d => d.__y__)
-                    .attr("dy", "0.9em")
+                    .attr("dy", "-0.2em")
                     .text(d => (d.__checked__ ? "✓" : "")  + d.candidate)
                     .each(function(d){ d.__label_length__ = this.getBBox().width });
 
@@ -597,7 +594,7 @@ function poll_chart_vertical() {
                 dist_g
                     .append("text")
                     .attr("class", "percent up-percent fill-color")
-                    .attr("x", d => Math.max(x(d.data.v1), x(d.data.v0) + d.__label_length__ + 42) )
+                    .attr("x", d => Math.max(x(d.data.v1), x(d.data.v0) + 42) )
                     .attr("y", d => d.__y__)
                     .attr("dy", "1em")
                     .text(d => percentFormat(d.data.v1));
@@ -605,7 +602,7 @@ function poll_chart_vertical() {
                 dist_g
                     .append("text")
                     .attr("class", "percent median-percent fill-color")
-                    .attr("x", d => Math.max(x(d.data.v), x(d.data.v0) + d.__label_length__ + 2))
+                    .attr("x", d => Math.max(x(d.data.v), x(d.data.v0) + 2))
                     .attr("y", d => d.__y__)
                     .attr("dy", "1em")
                     .attr("dx", "0.3em")
@@ -618,7 +615,7 @@ function poll_chart_vertical() {
                 return arr[arr.length - 1];
             }
 
-            function fix_overlaps(objects, padding) {
+            function fix_overlaps_for_objects(objects, padding) {
                 var extra_padding = padding * 0.2;
 
                 objects = objects
@@ -662,6 +659,10 @@ function poll_chart_vertical() {
                 }
             }
 
+            function fix_overlaps_labels() {
+                fix_overlaps_for_objects(top_labels, 15);
+                drawBackgroundForLabels();
+            }
 
             function fix_overlaps_y(elements, height) {
                 elements = elements.nodes().map(node => ({node: node, bbox: node.getBBox()}));
