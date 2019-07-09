@@ -61,7 +61,8 @@ function poll_chart_vertical() {
 
             var svg = container
                 .append("svg")
-                .attr("class", "svg-pane");
+                .attr("class", "svg-pane")
+                .html(' <defs> <pattern id="diagonal-stripe-2" patternUnits="userSpaceOnUse" width="5" height="5"> <image xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+" x="0" y="0" width="5" height="5"> </image> </pattern> </defs>')
 
             var margin = {top: 200, right: 5, bottom: 15, left: 10};
 
@@ -482,7 +483,8 @@ function poll_chart_vertical() {
                     .data(data)
                     .enter()
                     .append("g")
-                    .attr("class", d => "distribution " + d.key);
+                    .attr("class", d => "distribution " + d.key)
+                    .classed("unchecked", d => !d.__checked__);
 
                 var dist_rect = dist_g
                     .sort((d1, d2) => x(d2.data.v) - x(d1.data.v))
@@ -496,6 +498,7 @@ function poll_chart_vertical() {
                         d.__checked__ = !d.__checked__;
 
                         d3.select(this.parentNode)
+                            .classed("unchecked", d => !d.__checked__)
                             .selectAll("text.candidate-name")
                             .text((d.__checked__ ? "✓" : "")  + d.candidate);
 

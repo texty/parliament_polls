@@ -70,7 +70,6 @@ header {
       text-anchor: start; }
     .poll_chart svg .chart-pane .line {
       fill: none;
-      stroke: black;
       stroke-opacity: 0.9;
       shape-rendering: geometricPrecision;
       stroke-width: 3; }
@@ -79,14 +78,11 @@ header {
         stroke-width: 1; }
     .poll_chart svg .chart-pane .area {
       fill-opacity: 0.2;
-      fill: white;
       shape-rendering: geometricPrecision; }
     .poll_chart svg .chart-pane .area.center {
       fill-opacity: 0.8;
-      fill: white;
       shape-rendering: geometricPrecision; }
     .poll_chart svg .points-pane circle {
-      fill: grey;
       fill-opacity: 0.7;
       shape-rendering: geometricPrecision; }
     .poll_chart svg .points-popup-pane circle {
@@ -128,18 +124,26 @@ header {
         fill: none !important;
         stroke-opacity: 1 !important;
         stroke-width: 0.2rem;
-        stroke-linejoin: round;
-        stroke: white; }
+        stroke-linejoin: round; }
     .poll_chart svg g.distribution text.bottom-percent {
       text-anchor: end; }
     .poll_chart svg g.distribution text.up-percent, .poll_chart svg g.distribution text.median-percent {
       text-anchor: start; }
     .poll_chart svg g.distribution text.percent {
-      display: none;
       pointer-events: none; }
-    .poll_chart svg g.distribution:hover text.percent {
-      display: block; }
+    .poll_chart svg g.distribution.unchecked .fill-color {
+      fill: url(#diagonal-stripe-2) !important; }
+    .poll_chart svg g.distribution.unchecked .stroke-pseudo-transparent-color {
+      stroke: none; }
+    .poll_chart svg g.distribution.unchecked text.fill-color, .poll_chart svg g.distribution.unchecked text.candidate-name {
+      fill: #ccc !important; }
+    .poll_chart svg g.distribution.unchecked line.median-line {
+      stroke: #bbb !important; }
+    .poll_chart svg g.distribution.unchecked text.percent {
+      display: none; }
     @media (max-width: 700px) {
+      .poll_chart svg g.distribution text.percent {
+        display: none !important; }
       .poll_chart svg g.distribution:hover text.percent {
         display: none !important; } }
     .poll_chart svg .annotations-pane text {
@@ -151,121 +155,121 @@ header {
         stroke-linejoin: round; }
 
 .Опозиційна__платформа.stroke-color {
-  stroke: #ff02e7 !important; }
+  stroke: #ff02e7; }
 .Опозиційна__платформа.fill-color {
-  fill: #ff02e7 !important; }
+  fill: #ff02e7; }
 .Опозиційна__платформа.stroke-pseudo-transparent-color {
-  stroke: #ffccfa !important; }
+  stroke: #ffccfa; }
 .Опозиційна__платформа .stroke-color {
-  stroke: #ff02e7 !important; }
+  stroke: #ff02e7; }
 .Опозиційна__платформа .fill-color {
-  fill: #ff02e7 !important; }
+  fill: #ff02e7; }
 .Опозиційна__платформа .stroke-pseudo-transparent-color {
-  stroke: #ffccfa !important; }
+  stroke: #ffccfa; }
 
 .Батьківщина.stroke-color {
-  stroke: #e41a1c !important; }
+  stroke: #e41a1c; }
 .Батьківщина.fill-color {
-  fill: #e41a1c !important; }
+  fill: #e41a1c; }
 .Батьківщина.stroke-pseudo-transparent-color {
-  stroke: #fad1d2 !important; }
+  stroke: #fad1d2; }
 .Батьківщина .stroke-color {
-  stroke: #e41a1c !important; }
+  stroke: #e41a1c; }
 .Батьківщина .fill-color {
-  fill: #e41a1c !important; }
+  fill: #e41a1c; }
 .Батьківщина .stroke-pseudo-transparent-color {
-  stroke: #fad1d2 !important; }
+  stroke: #fad1d2; }
 
 .Європейська__солідарність.stroke-color {
-  stroke: #377eb8 !important; }
+  stroke: #377eb8; }
 .Європейська__солідарність.fill-color {
-  fill: #377eb8 !important; }
+  fill: #377eb8; }
 .Європейська__солідарність.stroke-pseudo-transparent-color {
-  stroke: #d7e5f1 !important; }
+  stroke: #d7e5f1; }
 .Європейська__солідарність .stroke-color {
-  stroke: #377eb8 !important; }
+  stroke: #377eb8; }
 .Європейська__солідарність .fill-color {
-  fill: #377eb8 !important; }
+  fill: #377eb8; }
 .Європейська__солідарність .stroke-pseudo-transparent-color {
-  stroke: #d7e5f1 !important; }
+  stroke: #d7e5f1; }
 
 .Слуга__народу.stroke-color {
-  stroke: #4daf4a !important; }
+  stroke: #4daf4a; }
 .Слуга__народу.fill-color {
-  fill: #4daf4a !important; }
+  fill: #4daf4a; }
 .Слуга__народу.stroke-pseudo-transparent-color {
-  stroke: #dbefdb !important; }
+  stroke: #dbefdb; }
 .Слуга__народу .stroke-color {
-  stroke: #4daf4a !important; }
+  stroke: #4daf4a; }
 .Слуга__народу .fill-color {
-  fill: #4daf4a !important; }
+  fill: #4daf4a; }
 .Слуга__народу .stroke-pseudo-transparent-color {
-  stroke: #dbefdb !important; }
+  stroke: #dbefdb; }
 
 .Не__піду__на__вибори.stroke-color {
-  stroke: #c1c1c1 !important; }
+  stroke: #c1c1c1; }
 .Не__піду__на__вибори.fill-color {
-  fill: #c1c1c1 !important; }
+  fill: #c1c1c1; }
 .Не__піду__на__вибори.stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
+  stroke: #f3f3f3; }
 .Не__піду__на__вибори .stroke-color {
-  stroke: #c1c1c1 !important; }
+  stroke: #c1c1c1; }
 .Не__піду__на__вибори .fill-color {
-  fill: #c1c1c1 !important; }
+  fill: #c1c1c1; }
 .Не__піду__на__вибори .stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
+  stroke: #f3f3f3; }
 
 .Не__визначились.stroke-color {
-  stroke: #c1c1c1 !important; }
+  stroke: #c1c1c1; }
 .Не__визначились.fill-color {
-  fill: #c1c1c1 !important; }
+  fill: #c1c1c1; }
 .Не__визначились.stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
+  stroke: #f3f3f3; }
 .Не__визначились .stroke-color {
-  stroke: #c1c1c1 !important; }
+  stroke: #c1c1c1; }
 .Не__визначились .fill-color {
-  fill: #c1c1c1 !important; }
+  fill: #c1c1c1; }
 .Не__визначились .stroke-pseudo-transparent-color {
-  stroke: #f3f3f3 !important; }
+  stroke: #f3f3f3; }
 
 .Grytsenko.stroke-color {
-  stroke: #984ea3 !important; }
+  stroke: #984ea3; }
 .Grytsenko.fill-color {
-  fill: #984ea3 !important; }
+  fill: #984ea3; }
 .Grytsenko.stroke-pseudo-transparent-color {
-  stroke: #eadced !important; }
+  stroke: #eadced; }
 .Grytsenko .stroke-color {
-  stroke: #984ea3 !important; }
+  stroke: #984ea3; }
 .Grytsenko .fill-color {
-  fill: #984ea3 !important; }
+  fill: #984ea3; }
 .Grytsenko .stroke-pseudo-transparent-color {
-  stroke: #eadced !important; }
+  stroke: #eadced; }
 
 .Голос____Вакарчук____.stroke-color {
-  stroke: #ff7f00 !important; }
+  stroke: #ff7f00; }
 .Голос____Вакарчук____.fill-color {
-  fill: #ff7f00 !important; }
+  fill: #ff7f00; }
 .Голос____Вакарчук____.stroke-pseudo-transparent-color {
-  stroke: #ffe5cc !important; }
+  stroke: #ffe5cc; }
 .Голос____Вакарчук____ .stroke-color {
-  stroke: #ff7f00 !important; }
+  stroke: #ff7f00; }
 .Голос____Вакарчук____ .fill-color {
-  fill: #ff7f00 !important; }
+  fill: #ff7f00; }
 .Голос____Вакарчук____ .stroke-pseudo-transparent-color {
-  stroke: #ffe5cc !important; }
+  stroke: #ffe5cc; }
 
 .Сила__і__Честь.stroke-color {
-  stroke: #ffd900 !important; }
+  stroke: #ffd900; }
 .Сила__і__Честь.fill-color {
-  fill: #ffd900 !important; }
+  fill: #ffd900; }
 .Сила__і__Честь.stroke-pseudo-transparent-color {
-  stroke: #fff7cc !important; }
+  stroke: #fff7cc; }
 .Сила__і__Честь .stroke-color {
-  stroke: #ffd900 !important; }
+  stroke: #ffd900; }
 .Сила__і__Честь .fill-color {
-  fill: #ffd900 !important; }
+  fill: #ffd900; }
 .Сила__і__Честь .stroke-pseudo-transparent-color {
-  stroke: #fff7cc !important; }
+  stroke: #fff7cc; }
 
 body {
   padding-top: 3em;

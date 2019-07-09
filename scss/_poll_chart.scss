@@ -65,7 +65,7 @@
 
     .chart-pane .line {
       fill: none;
-      stroke: black;
+      //stroke: black;
       stroke-opacity: 0.9;
       //stroke-dasharray: 10,10;
       shape-rendering: geometricPrecision;
@@ -79,18 +79,18 @@
 
     .chart-pane .area {
       fill-opacity: $area-opacity;
-      fill: white;
+      //fill: white;
       shape-rendering: geometricPrecision;
     }
 
     .chart-pane .area.center {
       fill-opacity: 0.8;
-      fill: white;
+      //fill: white;
       shape-rendering: geometricPrecision;
     }
 
     .points-pane circle {
-      fill: grey;
+      //fill: grey;
       fill-opacity: 0.7;
       shape-rendering: geometricPrecision;
     }
@@ -154,7 +154,7 @@
           stroke-opacity: 1 !important;
           stroke-width: 0.2rem;
           stroke-linejoin: round;
-          stroke: white;
+          //stroke: white;
         }
       }
 
@@ -167,17 +167,48 @@
       }
 
       text.percent {
-        display: none;
         pointer-events: none;
+        //display: none;
       }
 
-      &:hover {
+      //&:hover {
+      //  text.percent {
+      //    display: block;
+      //  }
+      //}
+
+      &.unchecked {
+        .fill-color {
+          fill: url(#diagonal-stripe-2) !important;
+        }
+
+        //.stroke-color {
+        //  stroke: black !important;
+        //}
+
+        .stroke-pseudo-transparent-color {
+          stroke: none;
+        }
+
+        text.fill-color, text.candidate-name {
+          fill: #ccc !important;
+        }
+
+        line.median-line {
+          stroke: #bbb !important;
+        }
+
         text.percent {
-          display: block;
+          display: none;
         }
       }
 
+
       @media #{$brk-mobile} {
+        text.percent {
+          display: none !important;
+        }
+
         &:hover {
           text.percent {
             display: none !important;
