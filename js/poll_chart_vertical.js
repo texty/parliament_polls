@@ -8,6 +8,7 @@ function poll_chart_vertical() {
         , x_domain
         , y_domain
         , x_tick_values
+        , vertical_line_value
 
         // , percentFormat = (function() {
         //     var base = d3.format(".1%");
@@ -171,6 +172,15 @@ function poll_chart_vertical() {
                 .attr("y1", y(new Date(2019, 0, 1)))
                 .attr("y2", y(new Date(2019, 0, 1)));
 
+            if (vertical_line_value) {
+                g
+                    .append("line")
+                    .attr("class", "vertical-line")
+                    .attr("x1", x(vertical_line_value))
+                    .attr("x2", x(vertical_line_value))
+                    .attr("y1", 0)
+                    .attr("y2", height)
+            }
 
             g.append("g")
                 .attr("class", "axis axis--y axis--y--labels")
@@ -761,6 +771,12 @@ function poll_chart_vertical() {
     my.x_tick_values = function(value) {
         if (!arguments.length) return x_tick_values;
         x_tick_values = value;
+        return my;
+    };
+
+    my.vertical_line_value = function(value) {
+        if (!arguments.length) return vertical_line_value;
+        vertical_line_value = value;
         return my;
     };
 

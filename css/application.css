@@ -153,6 +153,11 @@ header {
         stroke-width: 0.5rem;
         stroke-opacity: 1;
         stroke-linejoin: round; }
+    .poll_chart svg .vertical-line {
+      fill: none;
+      stroke-width: 1;
+      stroke: black;
+      stroke-dasharray: 1 4; }
 
 .Опозиційна__платформа.stroke-color {
   stroke: #ff02e7; }

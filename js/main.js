@@ -26,7 +26,7 @@
 
     fetchData("3", function(err, raw_data_lines, raw_data_points) {
         charts["3"] = makeChart(raw_data_lines, raw_data_points, candidates_3_checked,
-            candidates_3_unchecked, [0, 50], [0, 10, 20, 30, 40, 50]);
+            candidates_3_unchecked, [0, 50], [0, 5, 10, 20, 30, 40, 50], 5);
 
         var chart_select = d3.select("#chart-select").on("change", function(){
             drawChart(charts[chart_select.node().value])
@@ -52,7 +52,7 @@
     }
 
     function makeChart(raw_data_lines, raw_data_points, candidates_checked,
-                       candidates_unchecked, x_domain, x_tick_values) {
+                       candidates_unchecked, x_domain, x_tick_values, vertical_line_value) {
 
         var candidates = candidates_unchecked.concat(candidates_checked);
 
@@ -93,7 +93,8 @@
             .y_domain(d3.extent(raw_data_lines, d => d.date))
             .x_domain(x_domain)
             .x_tick_values(x_tick_values)
-            .yTickValues(polls);
+            .yTickValues(polls)
+            .vertical_line_value(vertical_line_value);
 
 
         lines_data.forEach(function(line, i) {
