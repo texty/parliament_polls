@@ -356,7 +356,8 @@ function poll_chart_vertical() {
                     .attr("x", d => x(d.v))
                     .attr("y", (d, i) => y(d.date) + 10 + i * 35)
                     .attr("dy", "2.5em")
-                    .text(d => d.poll_house);
+                    .text(d => d.poll_house)
+                    .each(d => console.log(d.poll_house));
 
                 var percents_background = annotations_pane
                     .selectAll("text.percent-background.enter")
@@ -379,6 +380,8 @@ function poll_chart_vertical() {
                     .attr("y", (d, i) => y(d.date) + 10 + i * 35 )
                     .attr("dy", "1.5em")
                     .text(d => percentFormat(d.v));
+
+
 
 
                 // fix_overlaps(poll_house_label, 2);
@@ -598,7 +601,7 @@ function poll_chart_vertical() {
                 dist_g
                     .append("text")
                     .attr("class", "percent bottom-percent fill-color")
-                    .attr("x", d => x(d.data.v0))
+                    .attr("x", d => x(d.data.v0) - 3)
                     .attr("y", d => d.__y__)
                     .attr("dy", "1em")
                     .attr("dx", "-0.3em")
@@ -607,7 +610,7 @@ function poll_chart_vertical() {
                 dist_g
                     .append("text")
                     .attr("class", "percent up-percent fill-color")
-                    .attr("x", d => Math.max(x(d.data.v1), x(d.data.v0) + 42) )
+                    .attr("x", d => Math.max(x(d.data.v1) + 3, x(d.data.v1) + (percentFormat(d.data.v1)).length * 4) + 3 )
                     .attr("y", d => d.__y__)
                     .attr("dy", "1em")
                     .text(d => percentFormat(d.data.v1));
